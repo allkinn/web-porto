@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portofolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+
+    <header class="navbar-container">
+
+        <div class="logo">
+            <span class="logo-text neon-glow">Portofolio</span>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+            <li><a href="home.html" class="nav-link active">Home</a></li>
+            <li><a href="project.html" class="nav-link">Project</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="user-actions">
+            <button id="theme-toggle" class="neon-button-outline" aria-label="Toggle Theme">
+                <span class="icon-text">☀️</span>
+            </button>
+
+            <a href="#" id="logout-btn" class="neon-button-outline">LOGOUT</a> 
+        </div>
+    </header>
+
+    <main class="hero-content-area">
+        <h1 class="neon-text main-title">ANSAR MUBAROQ</h1>
+        <p class="subtitle">Quarter-Stack Developer | Physics Student | Digital Multimeter | Osiloskop.</p>
+        
+        <section class="visual-grid">
+            
+            <div class="content-blocks">
+                
+                <div class="card neon-terminal-block">
+                    <h3 class="neon-text terminal-header">[ 0100 0001 SYSTEM STATUS REPORT ]</h3>
+                    <p class="data-line">> current_focus: <span class="text-online">Web Development</span></p>
+                    <p class="data-line">> primary_stack: React | Node.js | MongoDB</p>
+                    <p class="data-line">> experience_yrs: [ 07.03 YEARS ]</p>
+                    <a href="#portfolio-section" class="neon-button-outline" style="margin-top: 20px;">LIHAT PROYEK</a>
+                </div>
+
+                <div class="card profile-info-card">
+                    <h4 class="neon-text info-title">KONEKSI DIGITAL</h4>
+                    <p class="small-text">LinkedIn: <a href="[LINKEDIN]" class="neon-link">/in/username</a> <br>GitHub: <a href="https://github.com/allkinn" class="neon-link">/allkinn</a></p>
+                </div>
+                
+            </div>
+
+            <div class="profile-visual-container">
+                <div class="main-profile-image" style="background-image: url('images.jpeg');">
+                    </div>
+            </div>
+        </section>
+        
+        <div class="neon-cable-effect"></div>
+
+        <section id="portfolio-section" class="portfolio-section feature-section">
+            <h2 class="neon-text section-title">PROYEK TERENKRIPSI TERBARU</h2>
+            
+            <div class="feature-grid">
+                <div class="card project-card neon-terminal-block">
+                    <h3 class="data-line">PROYEK: [E-COMMERCE B2B]</h3>
+                    <p class="small-text">Sistem Inventori skala besar menggunakan **React** dan **Express**. Implementasi Redux untuk manajemen data. Status: Selesai.</p>
+                    <a href="#" class="neon-button-outline project-link">LIHAT SOURCE CODE</a>
+                </div>
+                
+                <div class="card project-card">
+                    <h3 class="data-line">PROYEK: [DATA VISUALIZER]</h3>
+                    <p class="small-text">Aplikasi visualisasi data *real-time* menggunakan **D3.js** dan **WebSocket**. Kontribusi pada arsitektur microservices.</p>
+                    <a href="#" class="neon-button-outline project-link">LIHAT DEMO</a>
+                </div>
+                
+                <div class="card project-card neon-terminal-block">
+                    <h3 class="data-line">PROYEK: [WEBSITE PERUSAHAAN]</h3>
+                    <p class="small-text">Desain ulang *corporate website* dari nol. Peningkatan Lighthouse score 40% dan implementasi CI/CD dengan GitLab.</p>
+                    <a href="#" class="neon-button-outline project-link">PELAJARI KASUS</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Copyright. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#" class="footer-link">Kebijakan Privasi</a>
+            <span class="separator">|</span>
+            <a href="#" class="footer-link">Syarat & Ketentuan</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script> 
+</body>
+</html>

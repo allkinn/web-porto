@@ -1,0 +1,481 @@
+/* Definisikan Variabel (Penting untuk Konsistensi) */
+:root {
+    --color-dark-bg: #111111;
+    --color-primary-neon: #00FF00; /* Hijau Neon Terang */
+    --color-text-dim: #777777; /* Abu-abu Redup untuk link default */
+    --shadow-neon: 0 0 5px var(--color-primary-neon), 0 0 10px rgba(0, 255, 0, 0.5);
+    --font-heading: 'Orbitron', sans-serif;
+    --color-secondary-neon: #FF00FF; /* Warna Magenta/Ungu untuk sorotan */
+
+    --color-text-light: #CCCCCC;
+
+    --shadow-neon: 0 0 5px var(--color-primary-neon), 0 0 10px rgba(0, 255, 0, 0.5);
+    --font-heading: 'Orbitron', sans-serif;
+    --font-terminal: 'Roboto Mono', monospace;
+}
+
+.dark-theme {
+    background-color: var(--color-dark-bg);
+    color: var(--color-text-light);
+    transition: background-color 0.5s, color 0.5s;
+}
+/* --- Gaya Navbar --- */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(17, 17, 17, 0.9); /* Latar belakang gelap semi-transparan */
+    backdrop-filter: blur(3px); /* Memberikan efek kaca buram (optional) */
+    position: sticky; /* Agar navbar tetap di atas */
+    top: 0;
+    z-index: 1000;
+    /* Garis pemisah tipis di bawah */
+    border-bottom: 1px solid rgba(0, 255, 0, 0.1); 
+}
+
+/* --- Logo Styling --- */
+.logo-text {
+    font-size: 1.5em;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--color-primary-neon);
+    text-transform: uppercase;
+    text-shadow: var(--shadow-neon); /* Efek Bersinar pada Logo */
+}
+
+/* --- Menu Navigasi --- */
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    color: var(--color-text-dim);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efek Hover dan Link Aktif (seperti di gambar) */
+.nav-link:hover,
+.nav-link.active {
+    color: var(--color-primary-neon);
+    text-shadow: var(--shadow-neon);
+    border-bottom: 2px solid var(--color-primary-neon); /* Garis bawah neon tipis */
+    padding-bottom: 3px;
+}
+
+/* --- Aksi Pengguna (Login & Ikon) --- */
+.user-actions {
+    display: flex;
+    align-items: center;
+}
+
+.profile-icon {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.neon-border {
+    /* Simulasikan ikon dengan border neon, seperti di kanan atas gambar */
+    border: 2px solid var(--color-primary-neon);
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px var(--color-primary-neon);
+    color: var(--color-primary-neon); /* Warna ikon */
+}
+
+/* --- Gaya Tombol Outline Neon --- */
+.neon-button-outline {
+    /* Gaya Dasar */
+    display: inline-block;
+    padding: 8px 15px; /* Padding untuk ukuran tombol */
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    /* Gaya Neon */
+    background: none; /* Tidak ada warna latar belakang */
+    color: var(--color-primary-neon); /* Teks berwarna neon */
+    border: 1px solid var(--color-primary-neon); /* Garis tepi neon */
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5); /* Glow samar */
+}
+
+/* Efek Hover */
+.neon-button-outline:hover {
+    background-color: var(--color-primary-neon); /* Latar belakang penuh saat di-hover */
+    text-shadow: none;
+    box-shadow: 0 0 15px var(--color-primary-neon); /* Glow lebih kuat saat di-hover */
+}
+
+/* Pastikan Tombol tetap berfungsi di Light Mode */
+body.light-theme .neon-button-outline {
+    background: none;
+    border: 1px solid var(--color-primary-neon);
+    box-shadow: none;
+}
+body.light-theme .neon-button-outline:hover {
+    background-color: var(--color-primary-neon);
+}
+
+.hero-content-area {
+    max-width: 1300px;
+    margin: 50px auto;
+    padding: 0 50px;
+}
+
+.main-title {
+    font-size: 5.5em; /* Sangat Besar */
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--color-primary-neon);
+    text-shadow: 
+        0 0 15px var(--color-primary-neon), 
+        0 0 30px rgba(0, 255, 0, 0.7), /* Glow Kuat */
+        0 0 45px rgba(0, 255, 0, 0.3);
+        font-family: var(--font-heading);
+}
+
+.subtitle {
+    color: var(--color-text-dim);
+    margin-bottom: 40px;
+    font-size: 1.1em;
+}
+
+.visual-grid {
+    display: grid;
+    /* Grid 1.5fr untuk konten kiri, 1fr untuk gambar kanan */
+    grid-template-columns: 1.5fr 1fr; 
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.profile-visual-container {
+    /* Mengatur posisi relatif agar elemen di dalamnya bisa diposisikan absolut jika perlu */
+    position: relative;
+    grid-column: 2 / 3; /* Memastikan ini di kolom kanan */
+    padding-top: 20px;
+}
+
+.main-profile-image {
+    /* Gunakan placeholder atau gambar Anda sendiri */
+    background: url('images.jpeg') center top no-repeat;
+    background-size: cover;
+    height: 450px;
+    width: 100%;
+    
+    /* FILTERS: Gelapkan dan Ubah menjadi Grayscale */
+    filter: grayscale(100%) brightness(35%);
+    
+    /* BOX-SHADOW: Sorotan Lampu Neon Hijau dan Magenta */
+    box-shadow: 
+        -15px 0 40px rgba(0, 255, 0, 0.8), /* Cahaya Hijau dari Kiri */
+        15px 0 40px rgba(255, 0, 255, 0.8);  /* Cahaya Magenta dari Kanan */
+    
+    /* Efek sudut yang memudar (transparansi pada bagian atas/bawah) */
+    mask-image: linear-gradient(to top, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+/* --- Gaya Kartu Umum --- */
+.content-blocks {
+    /* Ini adalah Kolom Kiri di dalam .visual-grid */
+    grid-column: 1 / 2;
+}
+
+.card {
+    background-color: #0A0A0A; /* Sangat gelap, lebih gelap dari BG utama */
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid #333333; /* Border abu-abu gelap default */
+    /* font-family: 'Roboto Mono', monospace; Gunakan font Monospace untuk kartu ini */
+    font-family: var(--font-terminal);
+}
+
+/* --- Gaya Blok Terminal Utama (Neon Border) --- */
+.neon-terminal-block {
+    border: 2px solid var(--color-primary-neon);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.4); /* Glow hijau di sekeliling border */
+}
+
+.terminal-header {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed var(--color-primary-neon); /* Garis pemisah putus-putus */
+}
+
+.data-line {
+    color: var(--color-primary-neon); /* Teks utama terminal adalah neon */
+    margin: 8px 0;
+    font-size: 0.9em;
+}
+
+/* Status Highlight (Opsional) */
+.text-online { color: #33FF33; } /* Hijau terang */
+.text-ok { color: #FFFF00; }     /* Kuning */
+
+/* --- Gaya Kartu Info Profil (DIKTIO HORNV) --- */
+.profile-info-card {
+    background-color: #1A1A1A; /* Sedikit lebih terang dari blok terminal */
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.icon-small {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.info-title {
+    font-size: 1.3em;
+    font-family: var(--font-heading);
+}
+
+.small-text {
+    font-size: 0.85em;
+    color: var(--color-text-dim);
+    line-height: 1.5;
+}
+
+/* --- Gaya Kartu Informasi Tambahan --- */
+.small-info-card {
+    background-color: #1A1A1A;
+    border: 1px solid var(--color-text-dim);
+}
+
+.info-title-small {
+    font-size: 1em;
+    color: var(--color-primary-neon);
+}
+
+/* --- Gaya Footer --- */
+.site-footer {
+    text-align: center;
+    padding: 30px 50px;
+    margin-top: 80px; /* Jarak dari konten atas */
+    background-color: var(--color-dark-bg);
+    font-size: 0.8em;
+    color: var(--color-text-dim);
+    
+    /* Garis neon pemisah di atas footer */
+    border-top: 1px solid rgba(0, 255, 0, 0.15); 
+    box-shadow: 0 -2px 5px rgba(0, 255, 0, 0.05); /* Glow sangat samar */
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-link {
+    color: var(--color-text-dim);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.footer-link:hover {
+    color: var(--color-primary-neon);
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5); /* Glow kecil saat hover */
+}
+
+.separator {
+    color: var(--color-text-dim);
+}
+
+/* --- Variabel Khusus Tema Terang --- */
+body.light-theme {
+    /* Override background dan teks utama */
+    --color-dark-bg: #FFFFFF;         /* Background Putih Terang */
+    --color-text-light: #333333;      /* Teks Gelap */
+    --color-text-dim: #777777;
+    
+    /* Mengubah warna neon menjadi warna aksen yang lebih halus (misal: Teal atau Biru gelap) */
+    --color-primary-neon: #008888;    /* Aksen Teal/Biru Gelap */
+    --shadow-neon: none;             /* Menghapus glow neon */
+
+    background-color: var(--color-dark-bg);
+    color: var(--color-text-light);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+/* --- Override Gaya Utama di Tema Terang --- */
+
+/* Navbar di Tema Terang */
+body.light-theme .navbar-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid #DDDDDD;
+    backdrop-filter: none; /* Hilangkan efek blur */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Shadow ringan */
+}
+
+/* Logo di Tema Terang */
+body.light-theme .logo-text {
+    color: var(--color-primary-neon); /* Warna aksen gelap */
+    text-shadow: none;
+}
+
+/* Link di Tema Terang */
+body.light-theme .nav-link:hover,
+body.light-theme .nav-link.active,
+body.light-theme .footer-link:hover {
+    color: var(--color-primary-neon);
+    text-shadow: none;
+    border-bottom-color: var(--color-primary-neon);
+}
+
+/* Kartu dan Blok di Tema Terang */
+body.light-theme .card {
+    background-color: #F8F8F8; /* Background kartu sedikit gelap */
+    border: 1px solid #E0E0E0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Shadow ringan */
+}
+
+/* Menghilangkan semua efek neon dari kartu dan gambar */
+body.light-theme .neon-terminal-block,
+body.light-theme .main-profile-image {
+    border: 1px solid #BBBBBB;
+    box-shadow: none;
+}
+
+/* --- Input dan Formulir --- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Memberikan jarak vertikal yang konsisten antara label/input */
+    padding: 15px; /* Memberikan sedikit padding di dalam border neon block */
+}
+
+/* Memastikan label selalu menjadi blok penuh */
+.contact-form label {
+    display: block;
+    margin-top: 10px; /* Jarak antara input sebelumnya dan label baru */
+    margin-bottom: 5px;
+}
+
+.neon-input {
+    /* Gaya Dasar Input */
+    box-sizing: border-box; /* SANGAT PENTING: Memastikan padding tidak menambah lebar total */
+    background-color: #050505; 
+    border: 1px solid var(--color-primary-neon); /* Jadikan border defaultnya NEON */
+    color: var(--color-primary-neon); 
+    padding: 12px; /* Meningkatkan padding agar teks tidak terlalu dekat dengan border */
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1em;
+    width: 100%;
+    
+    /* Menggunakan text-shadow pada input untuk efek glow yang lebih halus */
+    text-shadow: 0 0 1px var(--color-primary-neon); 
+    
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.neon-input:focus {
+    outline: none;
+    border-color: #33FF33; /* Warna neon yang sedikit berbeda saat fokus */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.9); /* Glow yang lebih kuat saat fokus */
+}
+
+/* Memperbaiki Placeholder agar tidak terlalu mengganggu */
+.neon-input::placeholder {
+    color: rgba(0, 255, 0, 0.4); /* Warna neon transparan */
+    font-style: italic;
+}
+
+.submit-button {
+    margin-top: 30px; /* Menambah jarak dari textarea di atasnya */
+    align-self: flex-start; /* Memulai tombol di kiri, bukan meregang sepanjang form */
+}
+
+/* --- Override Gaya di Light Mode --- */
+body.light-theme .neon-input {
+    background-color: white;
+    color: var(--color-text-light);
+    border-color: #AAAAAA;
+    box-shadow: none;
+}
+body.light-theme .neon-input:focus {
+    border-color: var(--color-primary-neon);
+    box-shadow: 0 0 5px rgba(0, 136, 136, 0.5); /* Glow aksen terang */
+}
+
+/* --- Gaya Project Card --- */
+.project-card {
+    /* Mewarisi gaya .card */
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Untuk mendorong link ke bawah */
+}
+
+.project-card .data-line {
+    margin-bottom: 5px;
+}
+
+.project-card .small-text {
+    /* Sedikit margin bawah agar tidak menempel pada tombol */
+    margin-bottom: 15px; 
+}
+
+.project-link {
+    align-self: flex-start; /* Tombol dimulai dari kiri */
+    padding: 5px 10px; /* Tombol lebih kecil */
+}
+
+/* --- Gaya Filter Proyek --- */
+.project-filters {
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-filters .data-line {
+    margin-right: 15px;
+    font-size: 0.9em;
+    color: var(--color-text-light); /* Lebih redup dari teks neon utama */
+}
+
+.filter-btn {
+    /* Gunakan gaya tombol outline neon */
+    padding: 5px 12px;
+    font-size: 0.75em; /* Lebih kecil */
+    font-family: var(--font-terminal);
+}
+
+.filter-btn.active-filter {
+    /* Gaya tombol yang sedang aktif/dipilih */
+    background-color: var(--color-primary-neon);
+    color: var(--color-dark-bg);
+    box-shadow: 0 0 10px var(--color-primary-neon);
+}
+
+/* Penyesuaian Metadata Proyek di dalam kartu */
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed rgba(0, 255, 0, 0.2);
+}
+
+.project-meta .tag {
+    font-size: 0.7em;
+    color: var(--color-text-dim);
+    margin-right: 10px;
+}

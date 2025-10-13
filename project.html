@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portofolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+
+    <header class="navbar-container">
+
+        <div class="logo">
+            <span class="logo-text neon-glow">Portofolio</span>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+            <li><a href="home.html" class="nav-link">Home</a></li>
+            <li><a href="project.html" class="nav-link active">Project</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="user-actions">
+            <button id="theme-toggle" class="neon-button-outline" aria-label="Toggle Theme">
+                <span class="icon-text">☀️</span>
+            </button>
+
+            <a href="#" id="logout-btn" class="neon-button-outline">LOGOUT</a> 
+        </div>
+    </header>
+
+    <main class="project-list-area hero-content-area">
+        <h1 class="neon-text main-title">PROYEK TERENKRIPSI</h1>
+        <p class="subtitle">Arsip data lengkap dari semua transmisi dan proyek yang telah diselesaikan. Klik pada kartu untuk detail lebih lanjut.</p>
+
+        <div class="project-filters">
+            <span class="data-line">FILTER BERDASARKAN STACK:</span>
+            <button class="neon-button-outline filter-btn active-filter" data-filter="all">SEMUA</button>
+            <button class="neon-button-outline filter-btn" data-filter="react">REACT.JS</button>
+            <button class="neon-button-outline filter-btn" data-filter="node">NODE.JS</button>
+            <button class="neon-button-outline filter-btn" data-filter="design">UX DESIGN</button>
+        </div>
+
+        <section class="project-grid feature-grid">
+            
+            <div class="card project-card neon-terminal-block" data-tags="react node">
+                <h3 class="data-line">P-ID: 001 | E-COMMERCE B2B</h3>
+                <p class="small-text">Sistem Inventori skala besar menggunakan **React** dan **Express**. Implementasi Redux untuk manajemen data.</p>
+                <div class="project-meta">
+                    <span class="data-line tag">#REACT</span>
+                    <span class="data-line tag">#NODE</span>
+                    <a href="#" class="neon-button-outline project-link">LIHAT SOURCE</a>
+                </div>
+            </div>
+            
+            <div class="card project-card" data-tags="d3 design">
+                <h3 class="data-line">P-ID: 002 | DATA VISUALIZER</h3>
+                <p class="small-text">Aplikasi visualisasi data *real-time* menggunakan **D3.js** dan **WebSocket**. Fokus pada arsitektur microservices.</p>
+                <div class="project-meta">
+                    <span class="data-line tag">#DESIGN</span>
+                    <span class="data-line tag">#D3.JS</span>
+                    <a href="#" class="neon-button-outline project-link">LIHAT DEMO</a>
+                </div>
+            </div>
+            
+            <div class="card project-card neon-terminal-block" data-tags="design">
+                <h3 class="data-line">P-ID: 003 | WEBSITE PERUSAHAAN</h3>
+                <p class="small-text">Desain ulang *corporate website* dari nol. Peningkatan Lighthouse score 40% dan implementasi CI/CD.</p>
+                <div class="project-meta">
+                    <span class="data-line tag">#DESIGN</span>
+                    <span class="data-line tag">#HTML/CSS</span>
+                    <a href="#" class="neon-button-outline project-link">PELAJARI KASUS</a>
+                </div>
+            </div>
+
+            </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Copyright. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#" class="footer-link">Kebijakan Privasi</a>
+            <span class="separator">|</span>
+            <a href="#" class="footer-link">Syarat & Ketentuan</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script> 
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portofolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+
+    <header class="navbar-container">
+
+        <div class="logo">
+            <span class="logo-text neon-glow">Portofolio</span>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+            <li><a href="home.html" class="nav-link">Home</a></li>
+            <li><a href="project.html" class="nav-link">Project</a></li>
+            <li><a href="about.html" class="nav-link ">About</a></li>
+            <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+        </nav>
+
+         <div class="user-actions">
+            <button id="theme-toggle" class="neon-button-outline" aria-label="Toggle Theme">
+                <span class="icon-text">☀️</span>
+            </button>
+
+            <a href="#" id="logout-btn" class="neon-button-outline">LOGOUT</a> 
+        </div>
+    </header>
+
+    <main class="contact-area hero-content-area">
+        <h1 class="neon-text main-title">HUBUNGI SAYA</h1>
+        <p class="subtitle">Kirim pesan terenkripsi. Kami akan merespons dalam 24 jam siklus standar.</p>
+
+        <section class="contact-grid visual-grid">
+            
+            <div class="contact-form-container content-blocks">
+                <form class="neon-terminal-block contact-form">
+                    
+                    <label for="name" class="data-line">Your Name</label>
+                    <input type="text" id="name" required class="neon-input" placeholder="Masukkan ID pengguna Anda">
+
+                    <label for="email" class="data-line">Your Email</label>
+                    <input type="email" id="email" required class="neon-input" placeholder="user@domain.com">
+
+                    <label for="subject" class="data-line">Your Subject</label>
+                    <input type="text" id="subject" class="neon-input" placeholder="Mengenai Kueri Data/Dukungan Teknis">
+
+                    <label for="message" class="data-line">Message</label>
+                    <textarea id="message" rows="6" required class="neon-input" placeholder="Tulis pesan Anda di sini..."></textarea>
+
+                    <button type="submit" class="neon-button-outline submit-button">KIRIM TRANSMISI</button>
+                </form>
+            </div>
+
+            <div class="contact-details-container profile-visual-container">
+                
+                <div class="card neon-terminal-block small-info-card">
+                    <h4 class="neon-text terminal-header">Lokasi Alamat</h4>
+                    <p class="data-line">> Status: <span class="text-online">online</span></p>
+                    <p class="data-line">> Koordinat: [ 34.0522 N, 118.2437 W ]</p>
+                    <p class="data-line">> Protokol Dukungan: TECH_SUPPORT@Copyright.NET</p>
+                </div>
+
+                <div class="map-placeholder">
+                    [DATA VISUALIZATION MAP]
+                </div>
+            </div>
+        </section>
+
+        <div class="neon-cable-effect"></div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Copyright. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#" class="footer-link">Kebijakan Privasi</a>
+            <span class="separator">|</span>
+            <a href="#" class="footer-link">Syarat & Ketentuan</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script> 
+</body>
+</html>
