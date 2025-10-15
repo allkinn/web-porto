@@ -107,9 +107,9 @@ function checkAccess() {
     const isLoggedIn = sessionStorage.getItem('isLoggedIn'); 
     const currentPage = window.location.pathname.split('/').pop();
 
-    if (currentPage !== 'login.html' && isLoggedIn !== 'true') {
-        window.location.href = 'login.html';
-    } else if (currentPage === 'login.html' && isLoggedIn === 'true') {
+    if (currentPage !== 'index.html' && isLoggedIn !== 'true') {
+        window.location.href = 'index.html';
+    } else if (currentPage === 'index.html' && isLoggedIn === 'true') {
         window.location.href = 'home.html';
     }
 }
@@ -133,4 +133,5 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = 'login.html';
         });
     }
+
 });
