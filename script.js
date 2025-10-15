@@ -130,8 +130,9 @@ document.addEventListener('DOMContentLoaded', () => {
             sessionStorage.removeItem('isLoggedIn');
             
             // Arahkan kembali ke halaman login
-            window.location.href = 'login.html';
+            window.location.href = 'index.html';
         });
     }
 
 });
+
